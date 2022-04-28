@@ -9,9 +9,6 @@ const displayMap = (locations, mapboxgl) => {
     container: "map",
     style: "mapbox://styles/phucq-ins/ckzv24fkt007u14jyc7mc1nhg",
     scrollZoom: false,
-    // center: [-118.113491, 34.111745],
-    // zoom: 10,
-    // interactive: false,
   });
 
   const bounds = new mapboxgl.LngLatBounds();
@@ -51,7 +48,6 @@ const displayMap = (locations, mapboxgl) => {
   });
 };
 
-// type is either 'password' or 'data'
 const updateSettings = async (data, type, token) => {
   try {
     const url =
@@ -59,7 +55,6 @@ const updateSettings = async (data, type, token) => {
         ? "https://phucnq-natour.herokuapp.com/api/v1/users/updateMyPassword"
         : "https://phucnq-natour.herokuapp.com/api/v1/users/updateMe";
 
-    // axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const res = await axios({
       method: "PATCH",
       url,

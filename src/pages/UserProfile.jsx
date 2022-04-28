@@ -30,7 +30,6 @@ const UserProfile = () => {
     form.append("photo", photoInputRef.current.files[0]);
     // (form.getAll("name"));
     const data = await updateSettings(form, "data", token);
-    data.data.user;
     dispatch(
       authActions.setUser({
         user: data.data.user,

@@ -53,7 +53,6 @@ const Login = () => {
       const res = await axios({
         method: "POST",
         url,
-        // url: 'https://phucnq-natour.herokuapp.com/api/v1/users/login',
         data,
       });
       if (res.data.status === "success") {
